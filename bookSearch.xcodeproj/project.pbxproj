@@ -17,6 +17,7 @@
 		62DDD6F12BE47D2E0033CFF4 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDD6F02BE47D2E0033CFF4 /* AddBookViewController.swift */; };
 		62DDD6F32BE47D440033CFF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDD6F22BE47D440033CFF4 /* DetailViewController.swift */; };
 		62DDD6F72BE4A9450033CFF4 /* RecentBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDD6F62BE4A9450033CFF4 /* RecentBookCollectionViewCell.swift */; };
+		62DDD6F92BE4DE0D0033CFF4 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDD6F82BE4DE0D0033CFF4 /* SearchResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		62DDD6F02BE47D2E0033CFF4 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		62DDD6F22BE47D440033CFF4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		62DDD6F62BE4A9450033CFF4 /* RecentBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		62DDD6F82BE4DE0D0033CFF4 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				62DDD6EC2BE47CFC0033CFF4 /* SearchViewController.swift */,
 				62DDD6F62BE4A9450033CFF4 /* RecentBookCollectionViewCell.swift */,
+				62DDD6F82BE4DE0D0033CFF4 /* SearchResultTableViewCell.swift */,
 				62DDD6F02BE47D2E0033CFF4 /* AddBookViewController.swift */,
 				62DDD6F22BE47D440033CFF4 /* DetailViewController.swift */,
 			);
@@ -180,6 +183,7 @@
 			files = (
 				62DDD6D72BE478650033CFF4 /* ViewController.swift in Sources */,
 				62DDD6F12BE47D2E0033CFF4 /* AddBookViewController.swift in Sources */,
+				62DDD6F92BE4DE0D0033CFF4 /* SearchResultTableViewCell.swift in Sources */,
 				62DDD6D32BE478650033CFF4 /* AppDelegate.swift in Sources */,
 				62DDD6F32BE47D440033CFF4 /* DetailViewController.swift in Sources */,
 				62DDD6F72BE4A9450033CFF4 /* RecentBookCollectionViewCell.swift in Sources */,

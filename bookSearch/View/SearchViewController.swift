@@ -67,23 +67,47 @@ class SearchViewController: UIViewController {
             make.top.equalTo(recentBookCollectionView.snp.bottom).offset(10)
             make.leading.equalToSuperview().inset(10)
         }
+        
+        searchResultTableView.snp.makeConstraints { make in
+            make.top.equalTo(tvLabel.snp.bottom).offset(10)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+            searchResultTableView.rowHeight = 100
+        }
+        
+        
+        
+        
     }
     
     func configure() {
         bookSearchBar.backgroundColor = .lightText
         
-        recentBookCollectionView.backgroundColor = .lightText
-        recentBookCollectionView.dataSource = self
-        recentBookCollectionView.delegate = self
-        recentBookCollectionView.register(RecentBookCollectionViewCell.self, forCellWithReuseIdentifier: RecentBookCollectionViewCell.rbIdentifier)
-        
+        // 탭바 label
         tabBarLabel.text = "Find My Book"
         tabBarLabel.textColor = .white
         
+        // 컬렉션 뷰 label
         cvLabel.text = "최근 본 책"
         cvLabel.textColor = .white
+        
+        // 컬렉션 뷰
+        recentBookCollectionView.backgroundColor = .lightText
+        recentBookCollectionView.dataSource = self
+        recentBookCollectionView.delegate = self
+        recentBookCollectionView.register(RecentBookCollectionViewCell.self, forCellWithReuseIdentifier: RecentBookCollectionViewCell.cvcIdentifier)
+        
+        // 테이블 뷰 label
         tvLabel.text = "검색 결과"
         tvLabel.textColor = .white
+        
+        // 테이블 뷰
+        searchResultTableView.dataSource = self
+        searchResultTableView.delegate = self
+        searchResultTableView.backgroundColor = .lightText
+        searchResultTableView.register(SearchResultTableViewCell.self, forCellReuseIdentifier: SearchResultTableViewCell.tvcIdentifier)
+        
     }
     
 }
@@ -94,7 +118,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecentBookCollectionViewCell.rbIdentifier, for: indexPath) as? RecentBookCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecentBookCollectionViewCell.cvcIdentifier, for: indexPath) as? RecentBookCollectionViewCell else { return UICollectionViewCell() }
         
         
         return cell
@@ -103,3 +127,17 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     
 }
 
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultTableViewCell.tvcIdentifier, for: indexPath) as? SearchResultTableViewCell else {return UITableViewCell()}
+        
+        
+        return cell
+    }
+    
+    
+}

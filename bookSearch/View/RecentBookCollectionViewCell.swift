@@ -8,7 +8,7 @@
 import UIKit
 
 class RecentBookCollectionViewCell: UICollectionViewCell {
-    static let rbIdentifier = "RBCollectionViewCell"
+    static let cvcIdentifier = "RBCollectionViewCell"
     
     let bookImage: UIImage = UIImage()
     let bookNameLabel: UILabel = UILabel()
